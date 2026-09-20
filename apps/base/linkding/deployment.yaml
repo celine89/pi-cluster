@@ -35,7 +35,7 @@ spec:
             - secretRef:
                 name: linkding-container-env
 
-          volumes:
-            - name: linkding-data
+      volumes:
+        - name: linkding-data
           persistentVolumeClaim:
             claimName: linkding-data-pvc
