@@ -1,0 +1,22 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: pod-health
+  namespace: monitoring
+spec:
+  groups:
+    - name: pod-health
+      rules:
+        - alert: PodNotHealthy
+          expr: |
+            kube_pod_container_status_waiting_reason > 0
+          for: 10m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Pod container is not healthy"
+            description: >-
+              Container {{ $labels.container }} in
+              {{ $labels.namespace }}/{{ $labels.pod }}
+              is waiting.
+              Reason: {{ $labels.reason }}
