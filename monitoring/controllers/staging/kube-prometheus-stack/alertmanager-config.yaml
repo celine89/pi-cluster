@@ -15,9 +15,7 @@ spec:
     emailConfigs:
     - to: 'selin.petrosian89@gmail.com'
       smarthost: 'smtp.gmail.com:587'
-      authUsername: 
-        name: gmail-smtp-secret
-        key: username
+      authUsername: 'selin.petrosian89@gmail.com'
       # Can reference a Secret key containing your Gmail App Password
       authPassword:
         name: gmail-smtp-secret
