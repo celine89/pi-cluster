@@ -3,6 +3,8 @@ kind: PrometheusRule
 metadata:
   name: pod-health
   namespace: monitoring
+  labels:
+    release: kube-prometheus-stack
 spec:
   groups:
     - name: pod-health
