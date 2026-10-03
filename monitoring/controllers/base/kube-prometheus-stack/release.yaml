@@ -31,3 +31,11 @@ spec:
   values:
     grafana:
       adminPassword: password
+    alertmanager:
+      config:
+        global:
+          # System placeholder required by Alertmanager parser to boot
+          smtp_from: 'alerts@yourdomain.com'
+      alertmanagerSpec:
+        alertmanagerConfigSelector: {}
+        alertmanagerConfigNamespaceSelector: {}
