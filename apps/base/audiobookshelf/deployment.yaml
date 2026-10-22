@@ -26,17 +26,6 @@ spec:
           securityContext:
             allowPrivilegeEscalation: false
 
-              # volumeMounts:
-              #   - name: linkding-data
-              #     mountPath: /etc/linkding/data
-
           envFrom:
             - configMapRef:
                 name: audiobookshelf-configmap
-              #   - secretRef:
-              #       name: linkding-container-env
-
-              # volumes:
-              #   - name: linkding-data
-              #     persistentVolumeClaim:
-              #       claimName: linkding-data-pvc
