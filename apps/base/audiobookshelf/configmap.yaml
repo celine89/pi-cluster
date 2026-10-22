@@ -1,5 +1,4 @@
 apiVersion: v1
-kind: Metadata # or v1 configmap
 kind: ConfigMap
 metadata:
   name: audiobookshelf-configmap
