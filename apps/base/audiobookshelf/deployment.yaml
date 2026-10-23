@@ -12,10 +12,11 @@ spec:
       labels:
         app: audiobookshelf
     spec:
-      #securityContext:
-      # fsGroup: 1000 # www-data group ID
-      # runAsUser: 1000 # www-data user ID
-      # runAsGroup: 1000 # www-data group ID
+      securityContext:
+        fsGroup: 1000 
+        runAsUser: 1000 
+        runAsGroup: 1000 
+          
       containers:
         - name: audiobookshelf
           image: ghcr.io/advplyr/audiobookshelf:2.37.1
